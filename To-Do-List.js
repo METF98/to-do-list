@@ -108,14 +108,6 @@ toDoList.addEventListener('click', (e) => {
   }
 });
 
-
-// checkbox.forEach((checkbox) => {
-//   checkbox.addEventListener('change', () => {
-//     checkbox.parentElement.classList.toggle('line-through');
-//     checkbox.parentElement.parentElement.classList.toggle('bg-green-300');
-//   });
-// });
-
 /**
  * @param {string} value
  * @returns {boolean}

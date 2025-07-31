@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-radial from-sky-400 to-blue-800 w-screen h-screen p-8 flex items-center justify-center">
+  <dialog id="modalNew" class=" flex-col items-center justify-center bg-gray-950/50 p-6 rounded-lg shadow-lg w-screen h-screen  z-50 fixed top-0 left-0">
+    <div id="containModal" class="flex flex-col gap-6 bg-gray-200 p-4 rounded-lg ">
+      <div class="flex items-center justify-between">
+        <h2 class="text-2xl font-bold">Nueva Tarea</h2>
+        <button id="btnClose"><i class="fa-solid fa-xmark text-gray-400 hover:text-gray-500 cursor-pointer"></i></button>
+      </div>
+      <div class="flex flex-col items-center justify-end w-full h-full gap-4">
+        <input id="inputNew" type="text" class="p-4 rounded-lg border border-gray-400 w-full" placeholder="Ingresa la tarea...">
+        <button id="btnSave" class="p-4 rounded-lg bg-blue-400 text-gray-100 hover:bg-blue-500 active:bg-blue-600 cursor-pointer w-full">Guardar</button>
+      </div>
+    </div>
+  </dialog>
+  <section class="bg-gray-100 p-6 rounded-lg shadow-lg w-3/4  flex flex-col gap-6">
+    <div class="flex items-center justify-between p-4">
+      <h1 class="text-4xl font-bold text-left">To-Do List Developer</h1>
+      <button id="btnPlus" class="rounded-lg bg-blue-400 px-4 py-2 text-gray-100 text-xl hover:bg-blue-500 cursor-pointer"><i class="fa-solid fa-plus"></i></button>
+    </div>
+    <ul id="toDoList">
+      <li class="flex items-center justify-between p-4 border-b border-gray-200 rounded-lg hover:bg-gray-300 cursor-pointer">
+        <div class="flex items-center gap-3">
+          <input  type="checkbox" class="checkbox cursor-pointer">
+          <span class="text-lg">Hacer el juego de piedra papel o tijera - ejercicio 1 del curso</span>
+        </div>
+        <button class="btnTrash rounded-lg bg-red-400 px-4 py-2 text-gray-100 text-xl hover:bg-red-500 cursor-pointer"><i class="fa-solid fa-trash pointer-events-none"></i></button>
+      </li>
+      <li class="flex items-center justify-between p-4 border-b border-gray-200 rounded-lg hover:bg-gray-300 cursor-pointer">
+        <div class="flex items-center gap-3">
+          <input type="checkbox" class="checkbox  cursor-pointer">
+          <span class="text-lg">Hacer el Buscador en Tiempo Real - ejercicio 2 del curso </span>
+        </div>
+        <button class="btnTrash rounded-lg bg-red-400 px-4 py-2 text-gray-100 text-xl hover:bg-red-500 cursor-pointer"><i class="fa-solid fa-trash pointer-events-none"></i></button>
+      </li>
+      <li class="flex items-center justify-between p-4 border-b border-gray-200 rounded-lg hover:bg-gray-300 cursor-pointer">
+        <div class="flex items-center gap-3">
+          <input type="checkbox" class="checkbox  cursor-pointer" >
+          <span class="text-lg">Hacer To-Do List - ejercicio 3 del curso</span>
+        </div>
+        <button class="btnTrash rounded-lg bg-red-400 px-4 py-2 text-gray-100 text-xl hover:bg-red-500 cursor-pointer"><i class="fa-solid fa-trash pointer-events-none"></i></button>
+      </li>
+    </ul>
+  </section>
+  <script src="To-Do-List.js"></script>
+</body>
+</html>

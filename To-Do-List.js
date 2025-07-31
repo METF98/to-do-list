@@ -104,9 +104,8 @@ toDoList.addEventListener('click', (e) => {
  */
 function validateRegex(value) {
   if(value === '') {return false;}
-  else if(value.length < 4 || value.length > 120) {return false;}
   else{
-    const regex = /^[a-zA-Z0-9\s]*$/i;
+    const regex = /^[a-zA-Z0-9\sáéíóúÁÉÍÓÚ]{4,120}$/i;
     return regex.test(value);
   }
 }

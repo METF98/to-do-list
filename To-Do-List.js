@@ -18,21 +18,10 @@ const checkbox = document.querySelectorAll('.checkbox');
 */
 btnSave.addEventListener('click', (e) => {
   e.preventDefault();
-  if(inputNew.value === ''){
+  if(!validateRegex(inputNew.value)){
     let alert = document.createElement('span');
-    alert.classList.add('text-red-500', 'text-lg');
-    alert.textContent = 'Debes ingresar una tarea';
-    containModal.insertBefore(alert, containModal.children[1]);
-    inputNew.classList.add( 'border-red-500');
-    setTimeout(() => {
-      alert.remove();
-      inputNew.classList.remove('border-red-500');
-    }, 2000);
-    return;
-  }else if(!validateRegex(inputNew.value)){
-    let alert = document.createElement('span');
-    alert.classList.add('text-red-500', 'text-lg');
-    alert.textContent = 'No se permiten caracteres especiales';
+    alert.classList.add('text-red-500', 'text-sm', 'font-semibold');
+    alert.textContent = 'El valor ingresado no cumple con el formato solicitado';
     containModal.insertBefore(alert, containModal.children[1]);
     inputNew.classList.add( 'border-red-500');
     setTimeout(() => {
@@ -114,8 +103,12 @@ toDoList.addEventListener('click', (e) => {
  * @description Valida si un string contiene solo letras y números
  */
 function validateRegex(value) {
-  const regex = /^[a-zA-Z0-9\s]*$/;
-  return regex.test(value);
+  if(value === '') {return false;}
+  else if(value.length < 4 || value.length > 20) {return false;}
+  else{
+    const regex = /^[a-zA-Z0-9\s]*$/i;
+    return regex.test(value);
+  }
 }
 
 

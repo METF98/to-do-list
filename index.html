@@ -11,7 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
 
-  <body class="bg-radial from-sky-400 to-blue-800 w-screen h-screen p-8 flex items-center justify-center">
+  <body class="bg-radial from-sky-400 to-blue-800 w-screen h-screen p-5 xl:p-8 flex items-center justify-center">
     <dialog id="modalNew" class=" flex-col items-center justify-center bg-gray-950/50 p-6 rounded-lg shadow-lg w-screen h-screen  z-50 fixed top-0 left-0">
       <div id="containModal" class="flex flex-col gap-6 bg-gray-200 p-4 rounded-lg ">
         <div class="flex items-center justify-between">
@@ -29,41 +29,41 @@
         </div>
       </div>
     </dialog>
-    <section class="bg-gray-100 p-6 rounded-lg shadow-lg w-3/4  flex flex-col gap-6">
-      <div class="flex items-center justify-between p-4">
-        <h1 class="text-4xl font-bold text-left">To-Do List Developer</h1>
+    <section class="bg-gray-100 p-6 rounded-lg shadow-lg lg:w-3/4  flex flex-col gap-6">
+      <div class="flex items-center gap-5 justify-between p-4">
+        <h1 class="text-3xl font-bold text-left">To-Do List Developer</h1>
         <button id="btnPlus" class="rounded-lg bg-blue-400 px-4 py-2 text-gray-100 text-xl hover:bg-blue-500 cursor-pointer">
           <i class="fa-solid fa-plus"></i>
         </button>
       </div>
       <ul id="toDoList">
-        <li class="flex items-center justify-between p-4 border-b border-gray-200 rounded-lg hover:bg-gray-300 cursor-pointer">
+        <li class="flex items-center gap-5 justify-between p-4 border-b border-gray-200 rounded-lg hover:bg-gray-300 cursor-pointer">
           <div class="flex items-center gap-3">
             <input type="checkbox" class="checkbox cursor-pointer">
             <span class="text-lg">
-              Hacer el juego de piedra papel o tijera - ejercicio 1 del curso
+              Hacer el juego de piedra papel o tijera
             </span>
           </div>
           <button class="btnTrash rounded-lg bg-red-400 px-4 py-2 text-gray-100 text-xl hover:bg-red-500 cursor-pointer">
             <i class="fa-solid fa-trash pointer-events-none"></i>
           </button>
         </li>
-        <li class="flex items-center justify-between p-4 border-b border-gray-200 rounded-lg hover:bg-gray-300 cursor-pointer">
+        <li class="flex items-center gap-5 justify-between p-4 border-b border-gray-200 rounded-lg hover:bg-gray-300 cursor-pointer">
           <div class="flex items-center gap-3">
             <input type="checkbox" class="checkbox  cursor-pointer">
             <span class="text-lg">
-              Hacer el Buscador en Tiempo Real - ejercicio 2 del curso
+              Hacer el Buscador en Tiempo Real
             </span>
           </div>
           <button class="btnTrash rounded-lg bg-red-400 px-4 py-2 text-gray-100 text-xl hover:bg-red-500 cursor-pointer">
             <i class="fa-solid fa-trash pointer-events-none"></i>
           </button>
         </li>
-        <li class="flex items-center justify-between p-4 border-b border-gray-200 rounded-lg hover:bg-gray-300 cursor-pointer">
+        <li class="flex items-center gap-5 justify-between p-4 border-b border-gray-200 rounded-lg hover:bg-gray-300 cursor-pointer">
           <div class="flex items-center gap-3">
             <input type="checkbox" class="checkbox  cursor-pointer">
             <span class="text-lg">
-              Hacer To-Do List - ejercicio 3 del curso
+              Hacer To-Do List
             </span>
           </div>
           <button class="btnTrash rounded-lg bg-red-400 px-4 py-2 text-gray-100 text-xl hover:bg-red-500 cursor-pointer">

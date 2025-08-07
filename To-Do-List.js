@@ -11,10 +11,9 @@ let containModal = document.getElementById('containModal');
 const checkbox = document.querySelectorAll('.checkbox');
 
 /**
- * Función que agrega una nueva tarea
+ * @description Función que lee el evento keydown al presionar la tecla enter y llama a la función registerNewTask
  * @param {Event} e
  * @returns {void}
- * @description Agrega una nueva tarea al To-Do List
 */
 inputNew.addEventListener('keydown', (e) => {
   if(e.key === 'Enter'){
@@ -23,11 +22,15 @@ inputNew.addEventListener('keydown', (e) => {
   }
 });
 
+/**
+ * @description Función que lee el evento click al presionar el botón Guardar y llama a la función registerNewTask
+ * @param {Event} e
+ * @returns {void}
+*/
 btnSave.addEventListener('click', (e) => {
   e.preventDefault();
   registerNewTask();
 });
-
 
 /**
  * Función que abre el modal para agregar una nueva tarea
@@ -95,6 +98,12 @@ function validateRegex(value) {
   }
 }
 
+/**
+ * Función que agrega una nueva tarea
+ * @param {Event} e
+ * @returns {void}
+ * @description Agrega una nueva tarea al To-Do List
+ */
 function registerNewTask(){
   if(!validateRegex(inputNew.value)){
     let alert = document.createElement('span');
